@@ -115,12 +115,45 @@ double signal2[];
 float t[];
 double[][] u_double;
 
+
+//-------------------------------------------------------------------------------
+// For Hilbert calculation and Convolution, "JDSP: a library of digital signal processing tools written in Java"
+// https://jdsp.dev
+// jdsp-0.5.0 was utilized as a jar file.
+// jdsp-0.5.0.jar in "code" folder
+// https://github.com/psambit9791/jdsp/tree/master
+// @software{sambit_paul_2023_7675362,
+//  author       = {Sambit Paul and
+//                  Sibo Van Gool},
+//  title        = {psambit9791/jdsp: v2.0.1 (February 24, 2023)},
+//  month        = feb,
+//  year         = 2023,
+//  publisher    = {Zenodo},
+//  version      = {v2.0.1},
+//  doi          = {10.5281/zenodo.7675362},
+//  url          = {https://doi.org/10.5281/zenodo.7675362}
+// }
+//-------------------------------------------------------------------------------
 import com.github.psambit9791.jdsp.transform.Hilbert;
+//-------------------------------------------------------------------------------
+// For FFT and Complex calculation, "Commons Math: The Apache Commons Mathematics Library"
+// https://commons.apache.org/proper/commons-math/
+// (commons-math3-3.6.1) was utilized as a jar file.
+// commons-math3-3.6.1.jar in "code" folder
+//-------------------------------------------------------------------------------
 import org.apache.commons.math3.transform.FastFourierTransformer;
 import org.apache.commons.math3.complex.Complex;
 import org.apache.commons.math3.transform.TransformType;
 import org.apache.commons.math3.stat.Frequency;
 import org.apache.commons.math3.transform.DftNormalization;
+
+// --------------------------------------------------------------
+// EMD: Empirical mode decomposition
+// --------------------------------------------------------------
+// The implementation for Processing using Java package tryout.emd which was build from the following Java code
+// https://stackoverflow.com/questions/10230106/is-there-some-empirical-mode-decomposition-library-in-java
+// The above code is from C implementation ( https://code.google.com/p/realtime-emd/ ) and translated it to Java.
+// --------------------------------------------------------------
 import tryout.emd.Emd;
 import tryout.emd.EmdDataImpl;
 
